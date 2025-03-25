@@ -14,5 +14,10 @@
         }, 3000); // 3 sekundy pauza
       }
     </script>
+
+<p>Referrer: <span id="ref"></span></p>
+<script>
+  document.getElementById("ref").innerText = document.referrer || "nic";
+</script>
   </body>
 </html>
