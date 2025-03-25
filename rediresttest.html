@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Redirecting...</title></head>
+  <body>
+    <p id="ref"></p>
+    <script>
+      const ref = document.referrer || "Žádný referer nebyl poslán.";
+      document.getElementById("ref").innerText = "Referrer: " + ref;
+
+      const target = new URLSearchParams(window.location.search).get("to");
+      if (target) {
+        setTimeout(() => {
+          window.location.href = target;
+        }, 3000); // 3 sekundy pauza
+      }
+    </script>
+  </body>
+</html>
